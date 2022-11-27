@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+  
+    "target": "es2016", 
+    "module": "commonjs",                                 
+    "lib": ["es6"],                                      
+    "rootDir": "./src",                                    
+    "baseUrl": "./",                                  
+    "resolveJsonModule": true,                           
+    "allowJs": true,                                   
+    "moduleResolution": "node",
+    "outDir": "dist",                              
+    "esModuleInterop": true,                             
+    "forceConsistentCasingInFileNames": true,            
+    "strict": true,                                  
+    "noImplicitAny": true,                               
+    "skipLibCheck": true                                
+  },
+  "include": ["./src/*.ts", "./**/*"], 
+  "exclude": ["node_modules"]
+}

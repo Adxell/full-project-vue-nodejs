@@ -1,0 +1,35 @@
+version: '3.9'
+services:
+  web:
+    depends_on:
+      - back
+    build: 
+      context: ./project-vue/.
+      dockerfile: Dockerfile
+    image: vue-deploy-nginx
+    restart: always
+    ports:
+      - "8080:80"
+  back:
+    depends_on:
+      - db
+    build:
+      context: ./back/.
+      dockerfile: Dockerfile
+    image: back-node
+    restart: always
+    ports: 
+      - "5002:5002"
+  db:
+    image: postgres
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+
+volumes:
+ dbdata:

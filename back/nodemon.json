@@ -1,0 +1,11 @@
+{
+  "watch": ["src"],
+  "ext": ".ts,.js",
+  "ignore": [],
+  "exec": "ts-node ./src/index.ts",
+  "env": {
+    "POSTGRES_DB": "railway",
+    "POSTGRES_USER": "postgres",
+    "POSTGRES_PASSWORD": "t9GwsFVI9OKI0u0RLNE6"
+  }
+}
